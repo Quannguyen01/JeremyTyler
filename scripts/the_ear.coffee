@@ -52,6 +52,8 @@ JTQuotes = [
   'No I am not the man, I am *A* man'
   'I loved balls, cones, cylinders, cubes etc, you name it'
   'that\'s Poland flag dood'
+  'Did you see the gass prices today?'
+  'My butt hurts'
 ]
 
 JTPotluck = [
