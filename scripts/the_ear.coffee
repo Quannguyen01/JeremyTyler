@@ -11,13 +11,11 @@
 JTQuotes = [
   'I\'m watching you.'
   'I love pork belly.'
-  'Don\'t be an A $ $.'
   'Do you want a banana?'
   'People in Asia call people from Honk Kong honkys.'
   'Oriental is a deragatory word.'
   'I should not have eaten that big hot burrito. I mean it was really big.'
   'I love balls.'
-  'Where is your king $ now, dood.'
   'You are a Trump Lover.'
   'Not the stupid squirrel again.'
   'Donald Trump is a fubar.'
@@ -25,7 +23,6 @@ JTQuotes = [
   'You are being a woose.'
   ':middle_finger:'
   'You must have wandered off into unknown territories like \'weird, illegit\' websites.'
-  'Gotta cut back on late night extra curricular activites.'
   'Kung pao chicken is a chicken dish, there should be no vegetables, especially water chestnuts. It isn\'t called Kung Pao water chestnuts.'
   'Where is your onkel today?'
   'I can\'t eat hot stuff anymore, I am too old and a sissy.'
@@ -36,7 +33,6 @@ JTQuotes = [
   'You seem to have a lot of excess body fat'
   'I want pork belly, I love pork belly, I WANT it. I want it so bad.'
   'Don\'t always believe everything'
-  'Hooker is more nice that prostitute'
   'Those people down there are going to want us to buy some kind of corn'
   'Oops, I cannot see... why?'
   'You know what, my butt is gone!'
@@ -66,7 +62,7 @@ module.exports = (robot) ->
   speak = (res, word) ->
     setTimeout () ->
       res.send word
-    , 1000 * Math.floor(Math.random() * 10 + 1)
+    , 1000 * Math.floor(Math.random() * 3 + 1)
 
   robot.hear /potluck/i, (res) ->
     speak res, res.random JTPotluck
