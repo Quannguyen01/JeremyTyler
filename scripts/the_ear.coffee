@@ -66,7 +66,7 @@ module.exports = (robot) ->
   speak = (res, word) ->
     setTimeout () ->
       res.send word
-    , 1000 * Math.floor(Math.random(10) + 1)
+    , 1000 * Math.floor(Math.random() * 10 + 1)
 
   robot.hear /potluck/i, (res) ->
     speak res, res.random JTPotluck
@@ -75,8 +75,8 @@ module.exports = (robot) ->
     message = res.match[0]
 
     if (message.match /potluck/i) is null
-      canISpeak = Math.random() > 0.6
+      canISpeak = Math.random() > 0.5
     
       if canISpeak
-        randIndx = Math.floor(Math.random(JTQuotes.length))
+        randIndx = Math.floor(Math.random() * JTQuotes.length)
         speak res, JTQuotes[randIndx]
