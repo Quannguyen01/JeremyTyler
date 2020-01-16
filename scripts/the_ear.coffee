@@ -64,15 +64,26 @@ module.exports = (robot) ->
       res.send word
     , 1000 * Math.floor(Math.random() * 3 + 1)
 
+  silence = false
+
   robot.hear /potluck/i, (res) ->
     speak res, res.random JTPotluck
 
-  robot.hear /.*/, (res) ->
-    message = res.match[0]
+  robot.respond /shut up/i, (res) -> 
+    res.send '👋'
+    silence = true
 
-    if (message.match /potluck/i) is null
-      canISpeak = Math.random() > 0.5
+  robot.respond /unshut/i, (res) ->
+    silence = false
+
+  robot.hear /.*/, (res) ->
+    if !silence
+      message = res.match[0]
+
+      if (message.match /potluck/i) is null
+
+        canISpeak = Math.random() > 0.5
     
-      if canISpeak
-        randIndx = Math.floor(Math.random() * JTQuotes.length)
-        speak res, JTQuotes[randIndx]
+        if canISpeak
+          randIndx = Math.floor(Math.random() * JTQuotes.length)
+          speak res, JTQuotes[randIndx]
