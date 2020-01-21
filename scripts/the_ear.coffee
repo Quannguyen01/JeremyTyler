@@ -67,7 +67,8 @@ module.exports = (robot) ->
   silence = false
 
   robot.hear /potluck/i, (res) ->
-    speak res, res.random JTPotluck
+    if Math.random() > 0.75
+      speak res, res.random JTPotluck
 
   robot.respond /shut up/i, (res) -> 
     res.send '👋'
@@ -82,7 +83,7 @@ module.exports = (robot) ->
 
       if (message.match /potluck/i) is null
 
-        canISpeak = Math.random() > 0.5
+        canISpeak = Math.random() > 0.98
     
         if canISpeak
           randIndx = Math.floor(Math.random() * JTQuotes.length)
