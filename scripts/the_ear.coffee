@@ -15,7 +15,6 @@ JTQuotes = [
   'People in Asia call people from Honk Kong honkys.'
   'Oriental is a deragatory word.'
   'I should not have eaten that big hot burrito. I mean it was really big.'
-  'I love balls.'
   'You are a Trump Lover.'
   'Not the stupid squirrel again.'
   'Donald Trump is a fubar.'
@@ -50,6 +49,7 @@ JTQuotes = [
   'that\'s Poland flag dood'
   'Did you see the gass prices today?'
   'My butt hurts'
+  ' I need it ... I can\'t live w/o pork belly. I must have it'
 ]
 
 JTPotluck = [
